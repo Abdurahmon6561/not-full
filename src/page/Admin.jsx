@@ -26,13 +26,9 @@ const Admin = () => {
     };
 
     try {
-      const response = await axios.post(
-        "https://ecommerce-backend-fawn-eight.vercel.app/api/categories",
-        data,
-        {
-          headers: headers,
-        }
-      );
+      const response = await axios.post(`${backendUrl}/categories`, data, {
+        headers: headers,
+      });
 
       console.log("Response data:", response.data); // Debugging: log response data
 
